@@ -95,7 +95,7 @@
 				<ToggleButton Grid.Column="0" Height="20" Style="{StaticResource TransparentIconToggleButton}" IsChecked="{Binding ItemModel.WeaponHidden}" BorderThickness="1" Padding="0" Margin="0"
 							  Visibility="{Binding IsValidWeapon, Converter={StaticResource B2V}}">
 					<ToggleButton.ToolTip>
-						<XivToolsWpf:TextBlock Key="Character_Equipment_WeaponToggle"/>
+						<XivToolsWpf:RenameTextBox Text="Character_Equipment_WeaponToggle"/>
 					</ToggleButton.ToolTip>
 
 					<fa:IconBlock Icon="EyeSlash" FontSize="10"/>
@@ -104,7 +104,7 @@
 				<!-- Head/Hat Visbility and Visor -->
 				<ToggleButton Grid.Column="0" Height="20" Style="{StaticResource TransparentIconToggleButton}" IsEnabled="{Binding Actor.CanRefresh}" Visibility="{Binding IsHead, Converter={StaticResource B2V}}" IsChecked="{Binding Actor.HatHidden}" BorderThickness="1" Padding="0" Margin="0">
 					<ToggleButton.ToolTip>
-						<XivToolsWpf:TextBlock Key="Character_Equipment_HatToggle"/>
+						<XivToolsWpf:RenameTextBox Text="Character_Equipment_HatToggle"/>
 					</ToggleButton.ToolTip>
 
 					<fa:IconBlock Icon="EyeSlash" FontSize="10"/>
@@ -112,7 +112,7 @@
 
 				<ToggleButton Grid.Column="0" Height="20" Style="{StaticResource TransparentIconToggleButton}"  IsEnabled="{Binding Actor.CanRefresh}" Visibility="{Binding IsHead, Converter={StaticResource B2V}}" IsChecked="{Binding Actor.VisorToggled}" BorderThickness="1" Padding="0" Margin="0">
 					<ToggleButton.ToolTip>
-						<XivToolsWpf:TextBlock Key="Character_Equipment_VisorToggle"/>
+						<XivToolsWpf:RenameTextBox Text="Character_Equipment_VisorToggle"/>
 					</ToggleButton.ToolTip>
 
 					<fa:IconBlock Icon="Mask" FontSize="10"/>
@@ -123,7 +123,7 @@
 				                     Value="{Binding ExtendedViewModel.Tint}" 
 				                     Visibility="{Binding IsWeapon, Converter={StaticResource B2V}}">
 					<ana:RgbColorControl.ToolTip>
-						<XivToolsWpf:TextBlock Key="Character_Equipment_Tint"/>
+						<XivToolsWpf:RenameTextBox Text="Character_Equipment_Tint"/>
 					</ana:RgbColorControl.ToolTip>
 					
 				</ana:RgbColorControl>
@@ -141,7 +141,7 @@
 						IsEnabled="{Binding Actor.CanRefresh}">
 
 					<Button.ToolTip>
-						<XivToolsWpf:TextBlock Key="Character_Equipment_Dye"/>
+						<XivToolsWpf:RenameTextBox Text="Character_Equipment_Dye"/>
 					</Button.ToolTip>
 
 					<Grid>

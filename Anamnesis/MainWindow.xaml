@@ -282,7 +282,7 @@
 								Grid.Column="5">
 							
 							<StackPanel Orientation="Horizontal" Margin="6,0,6,0">
-								<XivToolsWpf:TextBlock Key="Target_AddActor" Margin="0, 0, 6, 0" FontWeight="Bold" 
+								<XivToolsWpf:RenameTextBox Text="Target_AddActor" Margin="0, 0, 6, 0" FontWeight="Bold" 
 															Visibility="{Binding TargetService.PinnedActors.Count, Converter={StaticResource IsZeroToVisibility}}"/>
 								<fa:IconBlock FontSize="12" Icon="Plus" />
 							</StackPanel>
@@ -318,9 +318,9 @@
 														   FontSize="12"
 														   Margin="0, 0, 6, 0" />
 
-									<XivToolsWpf:TextBlock FontSize="12"
+									<XivToolsWpf:RenameTextBox FontSize="12"
 														   FontWeight="Light"
-														   Key="Help_Title" />
+														   Text="Help_Title" />
 
 									<XivToolsWpf:IconBlock Icon="ExternalLinkAlt"
 														   FontSize="8"
@@ -330,7 +330,7 @@
 						</Border>
 
 						<Button.ToolTip>
-							<XivToolsWpf:TextBlock Key="Help_Tip" />
+							<XivToolsWpf:RenameTextBox Text="Help_Tip" />
 						</Button.ToolTip>
 					</Button>
 
@@ -356,7 +356,7 @@
 						<!-- About -->
 						<Button Width="28" Style="{StaticResource TransparentIconButton}" Click="OnAboutClick">
 							<Button.ToolTip>
-								<XivToolsWpf:TextBlock Key="About_Title"/>
+								<XivToolsWpf:RenameTextBox Text="About_Title"/>
 							</Button.ToolTip>
 
 							<XivToolsWpf:IconBlock Icon="InfoCircle"/>
@@ -372,7 +372,7 @@
 								  Style="{DynamicResource TransparentIconToggleButton}">
 
 							<ToggleButton.ToolTip>
-								<XivToolsWpf:TextBlock Key="Settings_GameHotkeysTooltip" />
+								<XivToolsWpf:RenameTextBox Text="Settings_GameHotkeysTooltip" />
 							</ToggleButton.ToolTip>
 
 							<XivToolsWpf:IconBlock FontSize="12"
@@ -389,7 +389,7 @@
 								  Style="{DynamicResource TransparentIconToggleButton}">
 
 							<ToggleButton.ToolTip>
-								<XivToolsWpf:TextBlock Key="Settings_AlwaysOnTop" />
+								<XivToolsWpf:RenameTextBox Text="Settings_AlwaysOnTop" />
 							</ToggleButton.ToolTip>
 
 							<XivToolsWpf:IconBlock FontSize="12"
@@ -471,10 +471,8 @@
 						Grid.Row="0"
 						Grid.Column="1">
 						
-						<XivToolsWpf:TextBlock
-							Key="FTUE_Message"
-							AllLanguages="True"
-							TextWrapping="Wrap"
+						<XivToolsWpf:RenameTextBox
+							Text="FTUE_Message"
 							Margin="12"/>
 					</ScrollViewer>
 					

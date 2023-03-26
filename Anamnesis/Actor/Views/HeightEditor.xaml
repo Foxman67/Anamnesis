@@ -20,7 +20,7 @@
 
 		<XivToolsWpf:NumberBox Grid.Column="1" Value="{Binding ValueCm}" Slider="None" Minimum="0" Maximum="250" Margin="4, 0"/>
 
-		<XivToolsWpf:TextBlock Grid.Column="2" Text="cm" VerticalAlignment="Bottom" Margin="0, 0, 0, 4" FontSize="10"/>
+		<XivToolsWpf:RenameTextBox Grid.Column="2" Text="cm" VerticalAlignment="Bottom" Margin="0, 0, 0, 4" FontSize="10"/>
 
 	</Grid>
 	

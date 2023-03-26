@@ -29,7 +29,7 @@
 			<GroupBox Style="{StaticResource Cm3GroupBox}">
 				<GroupBox.Header>
 					<StackPanel>
-						<XivToolsWpf:TextBlock Key="EquipmentSelector_Classes" Foreground="{DynamicResource MaterialDesignBody}"/>
+						<XivToolsWpf:RenameTextBox Text="EquipmentSelector_Classes" Foreground="{DynamicResource MaterialDesignBody}"/>
 						<TextBlock x:Name="JobFilterText" Text="All" Foreground="{DynamicResource MaterialDesignBodyLight}" FontSize="10"/>
 					</StackPanel>
 				</GroupBox.Header>
@@ -41,7 +41,7 @@
 
 			<GroupBox Style="{StaticResource Cm3GroupBox}">
 				<GroupBox.Header>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_Categories" Foreground="{DynamicResource MaterialDesignBody}"/>
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_Categories" Foreground="{DynamicResource MaterialDesignBody}"/>
 				</GroupBox.Header>
 				<Border Background="{StaticResource MaterialDesignPaper}" CornerRadius="3">
 					<controls:ItemCategoryFilter Value="{Binding CategoryFilter}" IsWeaponSlot="{Binding IsWeaponSlot, Mode=OneWay}"/>
@@ -50,12 +50,12 @@
 
 			<GroupBox Style="{StaticResource Cm3GroupBox}">
 				<GroupBox.Header>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_FilterOther" Foreground="{DynamicResource MaterialDesignBody}"/>
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_FilterOther" Foreground="{DynamicResource MaterialDesignBody}"/>
 				</GroupBox.Header>
 				
 				<StackPanel Margin="8, 3">
 					<CheckBox IsChecked="{Binding ShowLocked}">
-						<XivToolsWpf:TextBlock Key="EquipmentSelector_ShowLocked"/>
+						<XivToolsWpf:RenameTextBox Text="EquipmentSelector_ShowLocked"/>
 					</CheckBox>
 				</StackPanel>
 			</GroupBox>
@@ -81,7 +81,7 @@
 						  Height="32">
 
 				<ToggleButton.ToolTip>
-					<XivToolsWpf:TextBlock Key="Common_Filters" />
+					<XivToolsWpf:RenameTextBox Text="Common_Filters" />
 				</ToggleButton.ToolTip>
 
 				<StackPanel Orientation="Horizontal">
@@ -94,7 +94,7 @@
 					Visibility="{Binding IsSmallclothesSlot, Converter={StaticResource B2V}}">
 
 				<Button.ToolTip>
-					<XivToolsWpf:TextBlock Key="Character_Equipment_NpcSmallclothes" />
+					<XivToolsWpf:RenameTextBox Text="Character_Equipment_NpcSmallclothes" />
 				</Button.ToolTip>
 
 				<fa:IconBlock Foreground="{DynamicResource MaterialDesignBodyLight}" Icon="UserShield" />
@@ -102,7 +102,7 @@
 
 			<Button Click="OnClearClicked" Style="{StaticResource TransparentIconButton}">
 				<Button.ToolTip>
-					<XivToolsWpf:TextBlock Key="Character_Equipment_ClearSlot" />
+					<XivToolsWpf:RenameTextBox Text="Character_Equipment_ClearSlot" />
 				</Button.ToolTip>
 
 				<fa:IconBlock Foreground="{DynamicResource MaterialDesignBodyLight}" Icon="Eraser" />
@@ -118,12 +118,12 @@
 				  SelectedIndex="{Binding SortModeInt, Mode=TwoWay}">
 
 			<ComboBox.ToolTip>
-				<XivToolsWpf:TextBlock Key="FileBrowser_Sort" />
+				<XivToolsWpf:RenameTextBox Text="FileBrowser_Sort" />
 			</ComboBox.ToolTip>
 
 			<ComboBoxItem>
 				<ComboBoxItem.ToolTip>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_SortAlpha" />
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_SortAlpha" />
 				</ComboBoxItem.ToolTip>
 
 				<XivToolsWpf:IconBlock Icon="SortAlphaDown" FontSize="16"/>
@@ -131,7 +131,7 @@
 
 			<ComboBoxItem>
 				<ComboBoxItem.ToolTip>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_SortRow" />
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_SortRow" />
 				</ComboBoxItem.ToolTip>
 
 				<XivToolsWpf:IconBlock Icon="CalendarAlt" FontSize="16"/>
@@ -139,7 +139,7 @@
 
 			<ComboBoxItem>
 				<ComboBoxItem.ToolTip>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_SortLevel" />
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_SortLevel" />
 				</ComboBoxItem.ToolTip>
 
 				<XivToolsWpf:IconBlock Icon="SortAmountDown" FontSize="16"/>
@@ -155,23 +155,23 @@
 
 			<CheckBox Padding="3" IsChecked="{Binding AutoOffhand}" Visibility="{Binding IsMainHandSlot, Converter={StaticResource B2V}}">
 				<CheckBox.ToolTip>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_AutoOffhandTip"/>
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_AutoOffhandTip"/>
 				</CheckBox.ToolTip>
-				<XivToolsWpf:TextBlock Key="EquipmentSelector_AutoOffhand"/>
+				<XivToolsWpf:RenameTextBox Text="EquipmentSelector_AutoOffhand"/>
 			</CheckBox>
 
 			<CheckBox Padding="3" IsChecked="{Binding ForceMainModel}" Visibility="{Binding IsOffHandSlot, Converter={StaticResource B2V}}">
 				<CheckBox.ToolTip>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_ForceMainModelTooltip"/>
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_ForceMainModelTooltip"/>
 				</CheckBox.ToolTip>
-				<XivToolsWpf:TextBlock Key="EquipmentSelector_ForceMainModel"/>
+				<XivToolsWpf:RenameTextBox Text="EquipmentSelector_ForceMainModel"/>
 			</CheckBox>
 
 			<CheckBox Padding="3" IsChecked="{Binding ForceOffModel}" Visibility="{Binding IsMainHandSlot, Converter={StaticResource B2V}}">
 				<CheckBox.ToolTip>
-					<XivToolsWpf:TextBlock Key="EquipmentSelector_ForceOffModelTooltip"/>
+					<XivToolsWpf:RenameTextBox Text="EquipmentSelector_ForceOffModelTooltip"/>
 				</CheckBox.ToolTip>
-				<XivToolsWpf:TextBlock Key="EquipmentSelector_ForceOffModel"/>
+				<XivToolsWpf:RenameTextBox Text="EquipmentSelector_ForceOffModel"/>
 			</CheckBox>
 		</StackPanel>
 
@@ -272,7 +272,7 @@
 											<RowDefinition/>
 										</Grid.RowDefinitions>
 
-										<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="EquipmentSelector_ItemId" HorizontalAlignment="Right" Visibility="{Binding RowId, Converter={StaticResource NotZeroToVisibility}}" Margin="0, 0, 6, 0"/>
+										<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="0" Text="EquipmentSelector_ItemId" HorizontalAlignment="Right" Visibility="{Binding RowId, Converter={StaticResource NotZeroToVisibility}}" Margin="0, 0, 6, 0"/>
 										<TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding RowId}" Visibility="{Binding RowId, Converter={StaticResource NotZeroToVisibility}}"/>
 
 										<TextBlock Grid.Column="0" Grid.Row="1" Text="Lv." HorizontalAlignment="Right" Visibility="{Binding EquipLevel, Converter={StaticResource NotZeroToVisibility}}" Margin="0, 0, 6, 0"/>
@@ -302,7 +302,7 @@
 
 							<ToggleButton Grid.Row="0" Style="{StaticResource InvisibleToggleButton}" IsChecked="{Binding IsFavorite}" Margin="6,0,0,0" Padding="0">
 								<ToggleButton.ToolTip>
-									<XivToolsWpf:TextBlock Key="EquipmentSelector_FavoriteToggleTip"/>
+									<XivToolsWpf:RenameTextBox Text="EquipmentSelector_FavoriteToggleTip"/>
 								</ToggleButton.ToolTip>
 								
 								<Grid>
@@ -316,7 +316,7 @@
 							<ToggleButton Grid.Row="1" Style="{StaticResource InvisibleToggleButton}" IsChecked="{Binding IsOwned}" Margin="6,3,0,0" Padding="0"
 								Visibility="{Binding CanOwn, Converter={StaticResource B2V}}">
 								<ToggleButton.ToolTip>
-									<XivToolsWpf:TextBlock Key="EquipmentSelector_OwnedToggleTip"/>
+									<XivToolsWpf:RenameTextBox Text="EquipmentSelector_OwnedToggleTip"/>
 								</ToggleButton.ToolTip>
 								<Grid>
 									<fa:IconBlock Icon="DollarSign" FontSize="13" Opacity="0.25"

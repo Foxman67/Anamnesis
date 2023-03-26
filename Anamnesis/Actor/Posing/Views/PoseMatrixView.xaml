@@ -23,7 +23,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_HeadCategory"/>
+							<XivToolsWpf:RenameTextBox Text="Pose_Matrix_HeadCategory"/>
 						</Button>
 					</GroupBox.Header>
 					<Grid>
@@ -47,22 +47,22 @@
 							<RowDefinition/>
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="Pose_Head" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="0" Key="Pose_Head" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="1" Grid.Row="0" BoneName="Head"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="0" Key="Pose_Nose" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="0" Key="Pose_Nose" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="3" Grid.Row="0" BoneName="Nose"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="0" Key="Pose_Bridge" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="0" Key="Pose_Bridge" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="5" Grid.Row="0" BoneName="Bridge"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="0" Key="Pose_Ears" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="0" Key="Pose_Ears" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="7" Grid.Row="0">
 							<local:BoneView BoneName="EarLeft" Label="L"/>
 							<local:BoneView BoneName="EarRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="8" Key="Pose_VieraEars" Style="{DynamicResource Label}" Visibility="{Binding IsViera, Converter={StaticResource B2V}}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="8" Key="Pose_VieraEars" Style="{DynamicResource Label}" Visibility="{Binding IsViera, Converter={StaticResource B2V}}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="9" Grid.ColumnSpan="4" Grid.Row="0" Visibility="{Binding IsEars01, Converter={StaticResource B2V}}">
 							<local:BoneView BoneName="VieraEar01ALeft" Label="L1"/>
 							<local:BoneView BoneName="VieraEar01BLeft" Label="L2"/>
@@ -89,50 +89,50 @@
 						</StackPanel>
 
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_Eyes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_Eyes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="EyeLeft" Label="L"/>
 							<local:BoneView BoneName="EyeRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="1" Key="Pose_Eyebrows" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="1" Key="Pose_Eyebrows" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal">
 							<local:BoneView BoneName="EyebrowLeft" Label="L"/>
 							<local:BoneView BoneName="EyebrowRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="1" Key="Pose_Brows" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="1" Key="Pose_Brows" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="1" Orientation="Horizontal">
 							<local:BoneView BoneName="BrowLeft" Label="L"/>
 							<local:BoneView BoneName="BrowRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="1" Key="Pose_Eyelids" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="1" Key="Pose_Eyelids" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="1" Orientation="Horizontal">
 							<local:BoneView BoneName="EyelidUpperLeft" Label="L"/>
 							<local:BoneView BoneName="EyelidUpperRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="8" Grid.Row="1" Key="Pose_LowerLids" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="8" Grid.Row="1" Key="Pose_LowerLids" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="9" Grid.Row="1" Orientation="Horizontal">
 							<local:BoneView BoneName="EyelidLowerLeft" Label="L"/>
 							<local:BoneView BoneName="EyelidLowerRight" Label="R"/>
 						</StackPanel>
 
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="2" Key="Pose_Cheeks" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="2" Key="Pose_Cheeks" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal"  Visibility="{Binding IsHrothgar, Converter={StaticResource !B2V}}">
 							<local:BoneView BoneName="CheekLeft" Label="L"/>
 							<local:BoneView BoneName="CheekRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="2" Key="Pose_Jaw" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="2" Key="Pose_Jaw" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="2" Orientation="Horizontal">
 							<local:BoneView BoneName="Jaw"/>
 							<local:BoneView BoneName="HrothJawUpper" Visibility="{Binding IsHrothgar, Converter={StaticResource B2V}}"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="2" Key="Pose_Mouth" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="2" Key="Pose_Mouth" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="2" Orientation="Horizontal">
 							<local:BoneView BoneName="LipsLeft" Label="L" Visibility="{Binding IsHrothgar, Converter={StaticResource !B2V}}"/>
 							<local:BoneView BoneName="LipsRight" Label="R" Visibility="{Binding IsHrothgar, Converter={StaticResource !B2V}}"/>
@@ -140,7 +140,7 @@
 							<local:BoneView BoneName="HrothLipsRight" Label="R" Visibility="{Binding IsHrothgar, Converter={StaticResource B2V}}"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="2" Key="Pose_UpperLip" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="2" Key="Pose_UpperLip" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="2" Orientation="Horizontal">
 							<local:BoneView BoneName="LipUpperA" Label="1" Visibility="{Binding IsHrothgar, Converter={StaticResource !B2V}}"/>
 							<local:BoneView BoneName="LipUpperB" Label="2" Visibility="{Binding IsHrothgar, Converter={StaticResource !B2V}}"/>
@@ -149,7 +149,7 @@
 							<local:BoneView BoneName="HrothLipUpperRight" Label="R" Visibility="{Binding IsHrothgar, Converter={StaticResource B2V}}"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="8" Grid.Row="2" Key="Pose_LowerLip" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="8" Grid.Row="2" Key="Pose_LowerLip" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="9" Grid.Row="2" Orientation="Horizontal">
 							<local:BoneView BoneName="LipLowerA" Label="1" Visibility="{Binding IsHrothgar, Converter={StaticResource !B2V}}"/>
 							<local:BoneView BoneName="LipLowerB" Label="2" Visibility="{Binding IsHrothgar, Converter={StaticResource !B2V}}"/>
@@ -162,7 +162,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_HairAndAccessoriesCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_HairAndAccessoriesCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -179,7 +179,7 @@
 							<ColumnDefinition Width="Auto"/>
 						</Grid.ColumnDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0"
+						<XivToolsWpf:KeyPrompt Grid.Column="0"
 											   Key="Pose_Earrings"
 											   Style="{DynamicResource Label}"
 											   Margin="16, 0, 3, 0" />
@@ -195,7 +195,7 @@
 											Label="R2" />
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2"
+						<XivToolsWpf:KeyPrompt Grid.Column="2"
 											   Key="Pose_Whiskers"
 											   Style="{DynamicResource Label}"
 											   Margin="16, 0, 3, 0"
@@ -209,7 +209,7 @@
 											Label="R" />
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Key="Pose_General" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Key="Pose_General" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Orientation="Horizontal" >
 							<local:BoneView BoneName="HairFrontLeft" Label="L"/>
 							<local:BoneView BoneName="HairFrontRight" Label="R"/>
@@ -217,7 +217,7 @@
 							<local:BoneView BoneName="HairB" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Key="Pose_Unique" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Key="Pose_Unique" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 
 						<ItemsControl Grid.Column="7"
 									  ItemsSource="{Binding HairBones}">
@@ -243,7 +243,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_BodyCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_BodyCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -271,94 +271,94 @@
 							<RowDefinition/>
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="Pose_Neck" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="0" Key="Pose_Neck" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="1" Grid.Row="0" BoneName="Neck"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="0" Key="Pose_Cervical" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="0" Key="Pose_Cervical" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="3" Grid.Row="0" BoneName="SpineC"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="0" Key="Pose_Thoracic" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="0" Key="Pose_Thoracic" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="5" Grid.Row="0" BoneName="SpineB"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="0" Key="Pose_Lumbar" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="0" Key="Pose_Lumbar" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="7" Grid.Row="0" BoneName="SpineA"/>
 
 						<!--<cm3:TextBlock Grid.Column="8" Grid.Row="0" Key="Pose_OtherAbdomen" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 							<local:BoneView Grid.Column="9" Grid.Row="0" BoneName="Abdomen"/>-->
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_Scabbards" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_Scabbards" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="ScabbardLeft" Label="L"/>
 							<local:BoneView BoneName="ScabbardRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="1" Key="Pose_Clavicles" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="1" Key="Pose_Clavicles" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="ClavicleLeft" Label="L"/>
 							<local:BoneView BoneName="ClavicleRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="1" Key="Pose_Breasts" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="1" Key="Pose_Breasts" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="BreastLeft" Label="L"/>
 							<local:BoneView BoneName="BreastRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="1" Key="Pose_Pauldrons" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="1" Key="Pose_Pauldrons" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="PauldronLeft" Label="L"/>
 							<local:BoneView BoneName="PauldronRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="2" Key="Pose_Shields" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="2" Key="Pose_Shields" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" >
 							<local:BoneView BoneName="ShieldLeft" Label="L"/>
 							<local:BoneView BoneName="ShieldRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="2" Key="Pose_Shoulders" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="2" Key="Pose_Shoulders" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="2" Orientation="Horizontal" >
 							<local:BoneView BoneName="ShoulderLeft" Label="L"/>
 							<local:BoneView BoneName="ShoulderRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="2" Key="Pose_Arms" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="2" Key="Pose_Arms" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="2" Orientation="Horizontal" >
 							<local:BoneView BoneName="ArmLeft" Label="L"/>
 							<local:BoneView BoneName="ArmRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="2" Key="Pose_Couters" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="2" Key="Pose_Couters" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="2" Orientation="Horizontal" >
 							<local:BoneView BoneName="CouterLeft" Label="L"/>
 							<local:BoneView BoneName="CouterRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="8" Grid.Row="2" Key="Pose_Elbows" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="8" Grid.Row="2" Key="Pose_Elbows" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="9" Grid.Row="2" Orientation="Horizontal" >
 							<local:BoneView BoneName="ElbowLeft" Label="L"/>
 							<local:BoneView BoneName="ElbowRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="3" Key="Pose_Forearms" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="3" Key="Pose_Forearms" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" >
 							<local:BoneView BoneName="ForearmLeft" Label="L"/>
 							<local:BoneView BoneName="ForearmRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="3" Key="Pose_Wrists" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="3" Key="Pose_Wrists" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="3" Orientation="Horizontal" >
 							<local:BoneView BoneName="WristLeft" Label="L"/>
 							<local:BoneView BoneName="WristRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="3" Key="Pose_IVCS_Breasts" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="3" Key="Pose_IVCS_Breasts" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="3" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_c_mune_l" Label="L"/>
 							<local:BoneView BoneName="iv_c_mune_r" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="3" Key="Pose_IVCS_Biceps" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="3" Key="Pose_IVCS_Biceps" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="3" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_nitoukin_l" Label="L"/>
 							<local:BoneView BoneName="iv_nitoukin_r" Label="R"/>
@@ -372,7 +372,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_LeftHandCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_LeftHandCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -400,44 +400,44 @@
 
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Key="Pose_Hands" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Key="Pose_Hands" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="HandLeft"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Key="Pose_Weapons" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Key="Pose_Weapons" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="WeaponLeft"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Key="Pose_Thumb" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Key="Pose_Thumb" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="ThumbALeft" Label="1"/>
 							<local:BoneView BoneName="ThumbBLeft" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Key="Pose_Index" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Key="Pose_Index" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="IndexALeft" Label="1"/>
 							<local:BoneView BoneName="IndexBLeft" Label="2"/>
 							<local:BoneView BoneName="iv_hito_c_l" Label="3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_Middle" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_Middle" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="MiddleALeft" Label="1"/>
 							<local:BoneView BoneName="MiddleBLeft" Label="2"/>
 							<local:BoneView BoneName="iv_naka_c_l" Label="3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="1" Key="Pose_Ring" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="1" Key="Pose_Ring" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="RingALeft" Label="1"/>
 							<local:BoneView BoneName="RingBLeft" Label="2"/>
 							<local:BoneView BoneName="iv_kusu_c_l" Label="3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="1" Key="Pose_Pinky" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="1" Key="Pose_Pinky" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="PinkyALeft" Label="1"/>
 							<local:BoneView BoneName="PinkyBLeft" Label="2"/>
@@ -450,7 +450,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_RightHandCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_RightHandCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -477,44 +477,44 @@
 							<RowDefinition/>
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Key="Pose_Hands" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Key="Pose_Hands" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="HandRight"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Key="Pose_Weapons" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Key="Pose_Weapons" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="WeaponRight"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Key="Pose_Thumb" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Key="Pose_Thumb" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="ThumbARight" Label="1"/>
 							<local:BoneView BoneName="ThumbBRight" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Key="Pose_Index" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Key="Pose_Index" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="IndexARight" Label="1"/>
 							<local:BoneView BoneName="IndexBRight" Label="2"/>
 							<local:BoneView BoneName="iv_hito_c_r" Label="3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_Middle" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_Middle" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="MiddleARight" Label="1"/>
 							<local:BoneView BoneName="MiddleBRight" Label="2"/>
 							<local:BoneView BoneName="iv_naka_c_r" Label="3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="1" Key="Pose_Ring" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="1" Key="Pose_Ring" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="RingARight" Label="1"/>
 							<local:BoneView BoneName="RingBRight" Label="2"/>
 							<local:BoneView BoneName="iv_kusu_c_r" Label="3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="1" Key="Pose_Pinky" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="1" Key="Pose_Pinky" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="PinkyARight" Label="1"/>
 							<local:BoneView BoneName="PinkyBRight" Label="2"/>
@@ -527,7 +527,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_LegsCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_LegsCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -553,46 +553,46 @@
 							<RowDefinition/>
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="Pose_Legs" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="0" Key="Pose_Legs" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="LegLeft" Label="L"/>
 							<local:BoneView BoneName="LegRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="0" Key="Pose_Poleyns" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="0" Key="Pose_Poleyns" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="PoleynLeft" Label="L"/>
 							<local:BoneView BoneName="PoleynRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="0" Key="Pose_Knees" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="0" Key="Pose_Knees" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="KneeLeft" Label="L"/>
 							<local:BoneView BoneName="KneeRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="0" Key="Pose_Calves" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="0" Key="Pose_Calves" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="7" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="CalfLeft" Label="L"/>
 							<local:BoneView BoneName="CalfRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_Sheathes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_Sheathes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="SheatheLeft" Label="L"/>
 							<local:BoneView BoneName="SheatheRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="1" Key="Pose_Holsters" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="1" Key="Pose_Holsters" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="HolsterLeft" Label="L"/>
 							<local:BoneView BoneName="HolsterRight" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="1" Key="Pose_Waist" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="1" Key="Pose_Waist" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="5" Grid.Row="1" BoneName="Waist"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="1" Key="Pose_Tail" Style="{DynamicResource Label}" Margin="16, 0, 3, 0" Visibility="{Binding HasTail, Converter={StaticResource B2V}}"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="1" Key="Pose_Tail" Style="{DynamicResource Label}" Margin="16, 0, 3, 0" Visibility="{Binding HasTail, Converter={StaticResource B2V}}"/>
 						<StackPanel Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Visibility="{Binding HasTail, Converter={StaticResource B2V}}">
 							<local:BoneView BoneName="TailA" Label="1"/>
 							<local:BoneView BoneName="TailB" Label="2"/>
@@ -607,7 +607,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_LeftFootCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_LeftFootCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -627,37 +627,37 @@
 							<ColumnDefinition Width="auto"/>
 						</Grid.ColumnDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="Pose_Foot" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="0" Key="Pose_Foot" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="1" Grid.Row="0" BoneName="FootLeft"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="0" Key="Pose_Toes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="0" Key="Pose_Toes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="3" Grid.Row="0" BoneName="ToesLeft"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="0" Key="Pose_BigToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="0" Key="Pose_BigToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="5" Grid.Row="0">
 							<local:BoneView BoneName="iv_asi_oya_a_l" Label="1"/>
 							<local:BoneView BoneName="iv_asi_oya_b_l" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="0" Key="Pose_IndexToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="0" Key="Pose_IndexToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="7" Grid.Row="0">
 							<local:BoneView BoneName="iv_asi_hito_a_l" Label="1"/>
 							<local:BoneView BoneName="iv_asi_hito_b_l" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_MiddleToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_MiddleToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
 							<local:BoneView BoneName="iv_asi_naka_a_l" Label="1"/>
 							<local:BoneView BoneName="iv_asi_naka_b_l" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="1" Key="Pose_ForeToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="1" Key="Pose_ForeToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="3" Grid.Row="1">
 							<local:BoneView BoneName="iv_asi_kusu_a_l" Label="1"/>
 							<local:BoneView BoneName="iv_asi_kusu_b_l" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="1" Key="Pose_PinkyToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="1" Key="Pose_PinkyToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="5" Grid.Row="1">
 							<local:BoneView BoneName="iv_asi_ko_a_l" Label="1"/>
 							<local:BoneView BoneName="iv_asi_ko_b_l" Label="2"/>
@@ -669,7 +669,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_RightFootCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_RightFootCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -689,37 +689,37 @@
 							<ColumnDefinition Width="auto"/>
 						</Grid.ColumnDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="Pose_Foot" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="0" Key="Pose_Foot" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="1" Grid.Row="0" BoneName="FootRight"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="0" Key="Pose_Toes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="0" Key="Pose_Toes" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<local:BoneView Grid.Column="3" Grid.Row="0" BoneName="ToesRight"/>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="0" Key="Pose_BigToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="0" Key="Pose_BigToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="5" Grid.Row="0">
 							<local:BoneView BoneName="iv_asi_oya_a_r" Label="1"/>
 							<local:BoneView BoneName="iv_asi_oya_b_r" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="6" Grid.Row="0" Key="Pose_IndexToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="6" Grid.Row="0" Key="Pose_IndexToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="7" Grid.Row="0">
 							<local:BoneView BoneName="iv_asi_hito_a_r" Label="1"/>
 							<local:BoneView BoneName="iv_asi_hito_b_r" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_MiddleToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_MiddleToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
 							<local:BoneView BoneName="iv_asi_naka_a_r" Label="1"/>
 							<local:BoneView BoneName="iv_asi_naka_b_r" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="1" Key="Pose_ForeToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="1" Key="Pose_ForeToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="3" Grid.Row="1">
 							<local:BoneView BoneName="iv_asi_kusu_a_r" Label="1"/>
 							<local:BoneView BoneName="iv_asi_kusu_b_r" Label="2"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="1" Key="Pose_PinkyToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="1" Key="Pose_PinkyToe" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Orientation="Horizontal" Grid.Column="5" Grid.Row="1">
 							<local:BoneView BoneName="iv_asi_ko_a_r" Label="1"/>
 							<local:BoneView BoneName="iv_asi_ko_b_r" Label="2"/>
@@ -731,7 +731,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_ClothesCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_ClothesCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -753,7 +753,7 @@
 							<RowDefinition/>
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="Pose_ClothesFront" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="0" Key="Pose_ClothesFront" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="ClothFrontALeft" Label="L1"/>
 							<local:BoneView BoneName="ClothFrontBLeft" Label="L2"/>
@@ -763,7 +763,7 @@
 							<local:BoneView BoneName="ClothFrontCRight" Label="R3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="2" Grid.Row="0" Key="Pose_ClothesBack" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="2" Grid.Row="0" Key="Pose_ClothesBack" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="ClothBackALeft" Label="L1"/>
 							<local:BoneView BoneName="ClothBackBLeft" Label="L2"/>
@@ -773,7 +773,7 @@
 							<local:BoneView BoneName="ClothBackCRight" Label="R3"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="4" Grid.Row="0" Key="Pose_ClothesSides" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="4" Grid.Row="0" Key="Pose_ClothesSides" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="5" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="ClothSideALeft" Label="L1"/>
 							<local:BoneView BoneName="ClothSideBLeft" Label="L2"/>
@@ -789,7 +789,7 @@
 				<GroupBox Visibility="{Binding HasEquipmentBones, Converter={StaticResource B2V}}">
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_EquipmentCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_EquipmentCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -804,7 +804,7 @@
 								<ColumnDefinition Width="72" />
 								<ColumnDefinition />
 							</Grid.ColumnDefinitions>
-							<XivToolsWpf:TextBlock Grid.Column="0"
+							<XivToolsWpf:KeyPrompt Grid.Column="0"
 												   Grid.Row="0"
 												   Key="Pose_EqHelm"
 												   Style="{DynamicResource Label}"
@@ -836,7 +836,7 @@
 								<ColumnDefinition />
 							</Grid.ColumnDefinitions>
 
-							<XivToolsWpf:TextBlock Grid.Column="0" Key="Pose_EqTop" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+							<XivToolsWpf:KeyPrompt Grid.Column="0" Key="Pose_EqTop" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 							<ItemsControl Grid.Column="1" ItemsSource="{Binding TopBones}">
 								<ItemsControl.ItemsPanel>
 									<ItemsPanelTemplate>
@@ -860,7 +860,7 @@
 				<GroupBox Visibility="{Binding HasWeaponBones, Converter={StaticResource B2V}}">
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_WeaponCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_WeaponCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -875,7 +875,7 @@
 								<ColumnDefinition Width="Auto" />
 								<ColumnDefinition />
 							</Grid.ColumnDefinitions>
-							<XivToolsWpf:TextBlock Grid.Column="0"
+							<XivToolsWpf:KeyPrompt Grid.Column="0"
 												   Grid.Row="0"
 												   Key="Pose_WeaponMainHand"
 												   Style="{DynamicResource Label}"
@@ -907,7 +907,7 @@
 								<ColumnDefinition />
 							</Grid.ColumnDefinitions>
 
-							<XivToolsWpf:TextBlock Grid.Column="0" Key="Pose_WeaponOffHand" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+							<XivToolsWpf:KeyPrompt Grid.Column="0" Key="Pose_WeaponOffHand" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 							<ItemsControl Grid.Column="1" ItemsSource="{Binding OffHandBones}">
 								<ItemsControl.ItemsPanel>
 									<ItemsPanelTemplate>
@@ -930,7 +930,7 @@
 				<GroupBox>
 					<GroupBox.Header>
 						<Button Style="{StaticResource LinkButton}" Click="OnGroupClicked">
-							<XivToolsWpf:TextBlock Key="Pose_Matrix_GenitalCategory"/>
+							<XivToolsWpf:KeyPrompt Key="Pose_Matrix_GenitalCategory"/>
 						</Button>
 					</GroupBox.Header>
 
@@ -953,7 +953,7 @@
 							<RowDefinition/>
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Key="Pose_Penis" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Key="Pose_Penis" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_ochinko_a" Label="1"/>
 							<local:BoneView BoneName="iv_ochinko_b" Label="2"/>
@@ -963,36 +963,36 @@
 							<local:BoneView BoneName="iv_ochinko_f" Label="6"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="3" Key="Pose_Scrotum" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="3" Key="Pose_Scrotum" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="4" Grid.Row="0" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_kougan_l" Label="L"/>
 							<local:BoneView BoneName="iv_kougan_r" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="1" Key="Pose_Vagina" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="1" Key="Pose_Vagina" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_omanko"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="3" Grid.Row="1" Key="Pose_Clitoris" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="3" Grid.Row="1" Key="Pose_Clitoris" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="4" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_kuritto"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="7" Grid.Row="1" Key="Pose_Labia" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="7" Grid.Row="1" Key="Pose_Labia" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="8" Grid.Row="1" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_inshin_l" Label="L"/>
 							<local:BoneView BoneName="iv_inshin_r" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="2" Key="Pose_Anus" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="0" Grid.Row="2" Key="Pose_Anus" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_koumon"/>
 							<local:BoneView BoneName="iv_koumon_l" Label="L"/>
 							<local:BoneView BoneName="iv_koumon_r" Label="R"/>
 						</StackPanel>
 
-						<XivToolsWpf:TextBlock Grid.Column="3" Grid.Row="2" Key="Pose_Buttocks" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
+						<XivToolsWpf:KeyPrompt Grid.Column="3" Grid.Row="2" Key="Pose_Buttocks" Style="{DynamicResource Label}" Margin="16, 0, 3, 0"/>
 						<StackPanel Grid.Column="4" Grid.Row="2" Orientation="Horizontal" >
 							<local:BoneView BoneName="iv_shiri_l" Label="L"/>
 							<local:BoneView BoneName="iv_shiri_r" Label="R"/>

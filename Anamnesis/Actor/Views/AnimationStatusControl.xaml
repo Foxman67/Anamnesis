@@ -25,7 +25,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <XivToolsWpf:TextBlock Text="{Binding Slot}"
+        <XivToolsWpf:RenameTextBox Text="{Binding Slot}"
 											   Grid.Row="0"
 											   Grid.Column="0"
 											   Style="{StaticResource Label}"
@@ -38,7 +38,7 @@
                                  IsReadOnly="True"
 								 Text="{Binding Path=AnimationId, Converter={StaticResource animToName}}">
             <TextBox.ToolTip>
-                <XivToolsWpf:TextBlock Key="Character_Action_AnimationName"/>
+                <XivToolsWpf:RenameTextBox Text="Character_Action_AnimationName"/>
             </TextBox.ToolTip>
         </TextBox>
 
@@ -48,7 +48,7 @@
                                  IsReadOnly="True"
 								 Text="{Binding Path=AnimationId}">
             <TextBox.ToolTip>
-                <XivToolsWpf:TextBlock Key="Character_Action_AnimationId"/>
+                <XivToolsWpf:RenameTextBox Text="Character_Action_AnimationId"/>
             </TextBox.ToolTip>
         </TextBox>
 
@@ -58,7 +58,7 @@
                                  IsReadOnly="True"
 								 Text="{Binding Path=Speed}">
             <TextBox.ToolTip>
-                <XivToolsWpf:TextBlock Key="Character_Action_AnimationSpeed"/>
+                <XivToolsWpf:RenameTextBox Text="Character_Action_AnimationSpeed"/>
             </TextBox.ToolTip>
         </TextBox>
     </Grid>

@@ -33,7 +33,7 @@
 		
 		<Grid.ToolTip>
 			<StackPanel>
-				<xivToolsWpf:TextBlock Key="{Binding TypeKey}" FontWeight="DemiBold"/>
+				<xivToolsWpf:KeyPrompt Key="{Binding TypeKey}" FontWeight="DemiBold"/>
 
 				<StackPanel Visibility="{Binding SubActor, Converter={StaticResource NotNullToVisibilityConverter}}">
 					<TextBlock Text="{Binding Npc.Name}"/>

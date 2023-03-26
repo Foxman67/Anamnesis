@@ -29,13 +29,13 @@
 			Margin="4,6,4,0"
 			Orientation="Horizontal">
             <CheckBox Margin="6,0" IsChecked="{Binding IncludePlayers}">
-                <XivToolsWpf:TextBlock Key="Target_Players" />
+                <XivToolsWpf:RenameTextBox Text="Target_Players" />
             </CheckBox>
             <CheckBox Margin="6,0" IsChecked="{Binding IncludeCompanions}">
-                <XivToolsWpf:TextBlock Key="Target_Companions" />
+                <XivToolsWpf:RenameTextBox Text="Target_Companions" />
             </CheckBox>
             <CheckBox Margin="6,0" IsChecked="{Binding IncludeNPCs}">
-                <XivToolsWpf:TextBlock Key="Target_Npc" />
+                <XivToolsWpf:RenameTextBox Text="Target_Npc" />
             </CheckBox>
         </StackPanel>
 
@@ -44,13 +44,13 @@
 			Margin="4,6,4,0"
 			Orientation="Horizontal">
             <CheckBox Margin="6,0" IsChecked="{Binding IncludeMounts}">
-                <XivToolsWpf:TextBlock Key="Target_Mounts" />
+                <XivToolsWpf:RenameTextBox Text="Target_Mounts" />
             </CheckBox>
             <CheckBox Margin="6,0" IsChecked="{Binding IncludeOrnaments}">
-                <XivToolsWpf:TextBlock Key="Target_Ornaments" />
+                <XivToolsWpf:RenameTextBox Text="Target_Ornaments" />
             </CheckBox>
             <CheckBox Margin="6,0" IsChecked="{Binding IncludeOther}">
-                <XivToolsWpf:TextBlock Key="Target_Other" />
+                <XivToolsWpf:RenameTextBox Text="Target_Other" />
             </CheckBox>
         </StackPanel>
 
@@ -84,7 +84,7 @@
 
                     <StackPanel Orientation="Horizontal">
                         <fa:IconBlock FontSize="12" Icon="Plus" Margin="6, 0, 6, 0"/>
-                        <XivToolsWpf:TextBlock Key="Target_SpawnActor" Margin="0, 0, 6, 0"/>
+                        <XivToolsWpf:RenameTextBox Text="Target_SpawnActor" Margin="0, 0, 6, 0"/>
                     </StackPanel>
                 </Button>
             </Grid>
@@ -110,12 +110,12 @@
 								Foreground="{DynamicResource MaterialDesignBody}"
 								Text="{Binding DisplayName}" />
 
-                            <XivToolsWpf:TextBlock
+                            <XivToolsWpf:RenameTextBox
 								Margin="6,0,0,0"
 								FontWeight="Light"
 								Foreground="{DynamicResource MaterialDesignBody}"
 								Visibility="{Binding IsGPoseActor, Converter={StaticResource B2V}}"
-								Key="Target_Gpose" />
+								Text="Target_Gpose" />
                         </StackPanel>
 
                         <TextBlock
@@ -148,7 +148,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <XivToolsWpf:TextBlock Key="Target_Hidden" Grid.Column="0" />
+            <XivToolsWpf:RenameTextBox Text="Target_Hidden" Grid.Column="0" />
             <CheckBox IsChecked="{Binding IncludeHidden}" Grid.Column="1" />
         </Grid>
 

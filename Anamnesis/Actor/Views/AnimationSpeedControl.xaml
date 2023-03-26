@@ -15,7 +15,7 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <XivToolsWpf:TextBlock Text="{Binding SlotName}"
+        <XivToolsWpf:RenameTextBox Text="{Binding SlotName}"
 											   Grid.Column="0"
 											   Style="{StaticResource Label}"
                                HorizontalAlignment="Left"/>

@@ -67,14 +67,14 @@
 								Visibility="{Binding Skeleton.CurrentBone, Converter={StaticResource NotNullToVisibilityConverter}}"
 							    Style="{StaticResource MaterialDesignTextBox}"/>
 
-							<XivToolsWpf:TextBlock Style="{StaticResource Header}"
+							<XivToolsWpf:RenameTextBox Style="{StaticResource Header}"
 													Text="{Binding Skeleton.CurrentBone.BoneName}" 
 													HorizontalAlignment="Right"
 													FontSize="10"
 													VerticalAlignment="Top"/>
 
-							<XivToolsWpf:TextBlock
-								Key="Pose_NothingSelected"
+                            <XivToolsWpf:RenameTextBox
+								Text="Pose_NothingSelected"
 								HorizontalAlignment="Left"
 								Style="{StaticResource Header}"
 								Visibility="{Binding Skeleton.CurrentBone, Converter={StaticResource NullToVisibilityConverter}}" />
@@ -94,27 +94,27 @@
 										  IsChecked="{Binding Skeleton.CurrentBone.EnableLinkedBones}">
 								<StackPanel Orientation="Horizontal">
 									<XivToolsWpf:IconBlock Icon="Link" FontSize="11"/>
-									<XivToolsWpf:TextBlock Text="{Binding Skeleton.CurrentBone.LinkedBonesCount, FallbackValue=0}" Margin="4, 0, 0, 0"/>
+									<XivToolsWpf:RenameTextBox Text="{Binding Skeleton.CurrentBone.LinkedBonesCount, FallbackValue=0}" Margin="4, 0, 0, 0"/>
 								</StackPanel>
 
 								<ToggleButton.ToolTip>
 									<StackPanel Orientation="Vertical" Width="256">
-										<XivToolsWpf:TextBlock Key="Pose_Linked" FontWeight="Bold"/>
+										<XivToolsWpf:RenameTextBox Text="Pose_Linked" FontWeight="Bold"/>
 										
 										<ItemsControl ItemsSource="{Binding Skeleton.CurrentBone.LinkedBones}"
 													  Margin="10, 0, 0, 0">
 											<ItemsControl.ItemTemplate>
 												<DataTemplate>
 													<StackPanel Orientation="Horizontal">
-														<XivToolsWpf:TextBlock Key="{Binding TooltipKey}"/>
-														<XivToolsWpf:TextBlock Text="{Binding BoneName, StringFormat=( {0:D} )}"
+														<XivToolsWpf:RenameTextBox Text="{Binding TooltipKey}"/>
+														<XivToolsWpf:RenameTextBox Text="{Binding BoneName, StringFormat=( {0:D} )}"
 																			   Margin="6, 0, 0, 0"/>
 													</StackPanel>
 												</DataTemplate>
 											</ItemsControl.ItemTemplate>
 										</ItemsControl>
 
-										<XivToolsWpf:TextBlock Key="Pose_Linked_Tooltip" TextWrapping="Wrap" Margin="0, 20, 0, 0"/>
+										<XivToolsWpf:RenameTextBox Text="Pose_Linked_Tooltip" Margin="0, 20, 0, 0"/>
 									</StackPanel>
 								</ToggleButton.ToolTip>
 								
@@ -138,7 +138,7 @@
 									Click="OnSelectChildrenClicked"
 									IsEnabled="{Binding Skeleton.HasSelection}"
 									Style="{StaticResource TransparentButton}">
-								<XivToolsWpf:TextBlock Key="Pose_SelectChildren" />
+								<XivToolsWpf:RenameTextBox Text="Pose_SelectChildren" />
 							</Button>
 
 							<Button Margin="2"
@@ -146,7 +146,7 @@
 									MinWidth="48"
 									Click="OnFlipClicked"
 									Style="{StaticResource TransparentButton}">
-								<XivToolsWpf:TextBlock Key="Pose_Flip" />
+								<XivToolsWpf:RenameTextBox Text="Pose_Flip" />
 							</Button>
 
 						</WrapPanel>
@@ -177,7 +177,7 @@
 								</controls:TransformEditor>
 
 								<XivToolsWpf:InfoControl
-									Key="Pose_WarningNotFrozen"
+									Text="Pose_WarningNotFrozen"
 									Margin="0,0,0,45">
 
 									<XivToolsWpf:InfoControl.Visibility>
@@ -208,7 +208,7 @@
 								Click="OnImportClicked">
 
 						<MenuItem.ToolTip>
-							<XivToolsWpf:TextBlock Key="Pose_LoadTip" />
+							<XivToolsWpf:RenameTextBox Text="Pose_LoadTip" />
 						</MenuItem.ToolTip>
 
 					</MenuItem>
@@ -218,7 +218,7 @@
 									Style="{StaticResource AnaMenuItem}"
 									Click="OnImportAllClicked" >
 							<MenuItem.ToolTip>
-								<XivToolsWpf:TextBlock Key="Pose_AllTooltip" />
+								<XivToolsWpf:RenameTextBox Text="Pose_AllTooltip" />
 							</MenuItem.ToolTip>
 						</MenuItem>
 
@@ -226,7 +226,7 @@
 									Style="{StaticResource AnaMenuItem}" 
 									Click="OnImportBodyClicked">
 							<MenuItem.ToolTip>
-								<XivToolsWpf:TextBlock Key="Pose_BodyTooltip" />
+								<XivToolsWpf:RenameTextBox Text="Pose_BodyTooltip" />
 							</MenuItem.ToolTip>
 						</MenuItem>
 
@@ -294,7 +294,7 @@
 								VerticalContentAlignment="Center"
 								IsChecked="{Binding PoseService.FreezePhysics}"
 								IsEnabled="{Binding PoseService.IsEnabled}">
-								<XivToolsWpf:TextBlock Key="Pose_FreezePhysics" />
+								<XivToolsWpf:RenameTextBox Text="Pose_FreezePhysics" />
 							</CheckBox>
 
 							<CheckBox Margin="3,0,6,0"
@@ -303,10 +303,10 @@
 									  Visibility="{Binding IsValidWeapon, Converter={StaticResource B2V}}">
 
 								<ToggleButton.ToolTip>
-									<XivToolsWpf:TextBlock Key="Character_Action_GlobalFreezeWorldPositionsTooltip"/>
+									<XivToolsWpf:RenameTextBox Text="Character_Action_GlobalFreezeWorldPositionsTooltip"/>
 								</ToggleButton.ToolTip>
 
-								<XivToolsWpf:TextBlock Key="Character_Action_GlobalFreezeWorldPositions" />
+								<XivToolsWpf:RenameTextBox Text="Character_Action_GlobalFreezeWorldPositions" />
 							</CheckBox>
 
 							<CheckBox
@@ -314,7 +314,7 @@
 								VerticalContentAlignment="Center"
 								IsChecked="{Binding PoseService.EnableParenting}"
 								IsEnabled="{Binding PoseService.IsEnabled}">
-								<XivToolsWpf:TextBlock Key="Pose_Parenting" />
+								<XivToolsWpf:RenameTextBox Text="Pose_Parenting" />
 							</CheckBox>
 
 							<Button
@@ -324,7 +324,7 @@
 									Click="OnClearClicked"
 									IsEnabled="{Binding Skeleton.HasSelection}"
 									Style="{StaticResource TransparentButton}">
-								<XivToolsWpf:TextBlock Key="Pose_Clear" />
+								<XivToolsWpf:RenameTextBox Text="Pose_Clear" />
 							</Button>
 
 						</StackPanel>
@@ -341,10 +341,10 @@
 									VerticalContentAlignment="Center"
 									IsChecked="{Binding PoseService.FreezeRotation}"
 									IsEnabled="{Binding PoseService.IsEnabled}">
-									<XivToolsWpf:TextBlock Key="Pose_EnableRotation" Margin="0,-2,0,2" />
+									<XivToolsWpf:RenameTextBox Text="Pose_EnableRotation" Margin="0,-2,0,2" />
 
 									<CheckBox.ToolTip>
-										<XivToolsWpf:TextBlock Key="Pose_EnableRotationTooltip" />
+										<XivToolsWpf:RenameTextBox Text="Pose_EnableRotationTooltip" />
 									</CheckBox.ToolTip>
 								</CheckBox>
 
@@ -353,10 +353,10 @@
 									VerticalContentAlignment="Center"
 									IsChecked="{Binding PoseService.FreezePositions}"
 									IsEnabled="{Binding PoseService.IsEnabled}">
-									<XivToolsWpf:TextBlock Key="Pose_EnablePosition" Margin="0,-2,0,2" />
+									<XivToolsWpf:RenameTextBox Text="Pose_EnablePosition" Margin="0,-2,0,2" />
 
 									<CheckBox.ToolTip>
-										<XivToolsWpf:TextBlock Key="Pose_EnablePositionTooltip" />
+										<XivToolsWpf:RenameTextBox Text="Pose_EnablePositionTooltip" />
 									</CheckBox.ToolTip>
 								</CheckBox>
 
@@ -365,10 +365,10 @@
 									VerticalContentAlignment="Center"
 									IsChecked="{Binding PoseService.FreezeScale}"
 									IsEnabled="{Binding PoseService.IsEnabled}">
-									<XivToolsWpf:TextBlock Key="Pose_EnableScale" Margin="0,-2,0,2" />
+									<XivToolsWpf:RenameTextBox Text="Pose_EnableScale" Margin="0,-2,0,2" />
 
 									<CheckBox.ToolTip>
-										<XivToolsWpf:TextBlock Key="Pose_EnableScaleTooltip" />
+										<XivToolsWpf:RenameTextBox Text="Pose_EnableScaleTooltip" />
 									</CheckBox.ToolTip>
 								</CheckBox>
 							</StackPanel>
@@ -445,7 +445,7 @@
 			</Grid>
 
 			<XivToolsWpf:InfoControl
-				Key="Pose_WarningNotGPose"
+				Text="Pose_WarningNotGPose"
 				Margin="6, 7"
 				Grid.Row="0"
 				Grid.RowSpan="2"
@@ -454,7 +454,7 @@
 			<Grid Visibility="{Binding GposeService.IsGpose, Converter={StaticResource B2V}}"
 				  Grid.Row="0"
 				  Grid.RowSpan="2">
-				<XivToolsWpf:InfoControl IsError="False" Key="Pose_NotEnabled" VerticalAlignment="Bottom" Margin="6, 7" 
+				<XivToolsWpf:InfoControl IsError="False" Text="Pose_NotEnabled" VerticalAlignment="Bottom" Margin="6, 7" 
 										 Visibility="{Binding PoseService.IsEnabled, Converter={StaticResource !B2V}}"/>
 			</Grid>
 		</Grid>
@@ -462,12 +462,12 @@
 		<Grid Visibility="{Binding Actor, Converter={StaticResource NotNullToVisibilityConverter}}">
 			<Grid Visibility="{Binding Actor.ModelObject, Converter={StaticResource NotNullToVisibilityConverter}}">
 				<Grid Visibility="{Binding Skeleton, Converter={StaticResource NullToVisibilityConverter}}">
-					<XivToolsWpf:InfoControl IsError="True" Key="Pose_NoSkeleton" VerticalAlignment="Bottom" Margin="12"/>
+					<XivToolsWpf:InfoControl IsError="True" Text="Pose_NoSkeleton" VerticalAlignment="Bottom" Margin="12"/>
 				</Grid>
 			</Grid>
 
 			<Grid Visibility="{Binding Actor.ModelObject, Converter={StaticResource NullToVisibilityConverter}}">
-				<XivToolsWpf:InfoControl IsError="True" Key="Pose_NoModel" VerticalAlignment="Bottom" Margin="12"/>
+				<XivToolsWpf:InfoControl IsError="True" Text="Pose_NoModel" VerticalAlignment="Bottom" Margin="12"/>
 			</Grid>
 		</Grid>
 

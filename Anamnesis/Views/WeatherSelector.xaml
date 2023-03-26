@@ -22,10 +22,10 @@
 			<CheckBox IsChecked="{Binding NaturalWeathers}">
 
 				<CheckBox.ToolTip>
-					<XivToolsWpf:TextBlock Key="Weather_Selector_Natural_Tooltip" />
+					<XivToolsWpf:RenameTextBox Text="Weather_Selector_Natural_Tooltip" />
 				</CheckBox.ToolTip>
 				
-				<XivToolsWpf:TextBlock Key="Weather_Selector_Natural" />
+				<XivToolsWpf:RenameTextBox Text="Weather_Selector_Natural" />
 			</CheckBox>
 		</Grid>
 

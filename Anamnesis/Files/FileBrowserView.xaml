@@ -48,9 +48,9 @@
 							<Image Source="{Binding Icon}">
 								<Image.ToolTip>
 									<StackPanel>
-										<XivToolsWpf:TextBlock Key="{Binding LabelKey}"
+										<XivToolsWpf:RenameTextBox Text="{Binding LabelKey}"
 															   FontWeight="Bold" />
-										<XivToolsWpf:TextBlock Text="{Binding Path}" />
+										<XivToolsWpf:RenameTextBox Text="{Binding Path}" />
 									</StackPanel>
 								</Image.ToolTip>
 							</Image>
@@ -82,7 +82,7 @@
 					Height="28">
 
 				<Button.ToolTip>
-					<XivToolsWpf:TextBlock Key="FileBrowser_GoUp" />
+					<XivToolsWpf:RenameTextBox Text="FileBrowser_GoUp" />
 				</Button.ToolTip>
 
 				<fa:IconBlock Icon="LevelUpAlt"
@@ -101,8 +101,8 @@
 						  Style="{StaticResource OutlineToggleButton}"
 						  Visibility="{Binding SettingsService.Settings.ShowFileExtensions, Converter={StaticResource !B2V}}"
 						  Click="OnShowExtensionClicked">
-				<XivToolsWpf:TextBlock
-					Key="FileBrowser_ExtensionShort"/>
+				<XivToolsWpf:RenameTextBox
+					Text="FileBrowser_ExtensionShort"/>
 			</ToggleButton>
 
 			<Button Grid.Column="3"
@@ -113,7 +113,7 @@
 					Style="{StaticResource TransparentButton}">
 
 				<Button.ToolTip>
-					<XivToolsWpf:TextBlock Key="FileBrowser_CreateFolder" />
+					<XivToolsWpf:RenameTextBox Text="FileBrowser_CreateFolder" />
 				</Button.ToolTip>
 
 				<fa:IconBlock Icon="FolderPlus" />
@@ -127,7 +127,7 @@
 						  VerticalAlignment="Bottom">
 
 				<ToggleButton.ToolTip>
-					<XivToolsWpf:TextBlock Key="FileBrowser_Flatten" />
+					<XivToolsWpf:RenameTextBox Text="FileBrowser_Flatten" />
 				</ToggleButton.ToolTip>
 
 				<XivToolsWpf:IconBlock FontSize="12"
@@ -141,12 +141,12 @@
 					  SelectedIndex="{Binding SortModeInt, Mode=TwoWay}">
 
 				<ComboBox.ToolTip>
-					<XivToolsWpf:TextBlock Key="FileBrowser_Sort" />
+					<XivToolsWpf:RenameTextBox Text="FileBrowser_Sort" />
 				</ComboBox.ToolTip>
 
 				<ComboBoxItem>
 					<ComboBoxItem.ToolTip>
-						<XivToolsWpf:TextBlock Key="FileBrowser_SortAlpha" />
+						<XivToolsWpf:RenameTextBox Text="FileBrowser_SortAlpha" />
 					</ComboBoxItem.ToolTip>
 
 					<XivToolsWpf:IconBlock Icon="SortAlphaDown" />
@@ -154,7 +154,7 @@
 
 				<ComboBoxItem>
 					<ComboBoxItem.ToolTip>
-						<XivToolsWpf:TextBlock Key="FileBrowser_SortDate" />
+						<XivToolsWpf:RenameTextBox Text="FileBrowser_SortDate" />
 					</ComboBoxItem.ToolTip>
 
 					<XivToolsWpf:IconBlock Icon="CalendarAlt" />
@@ -175,19 +175,19 @@
 								<Image MaxWidth="100" MaxHeight="200" Margin="0, 0, 6, 0" Source="{Binding File.ImageSource}"/>
 
 								<StackPanel Orientation="Vertical" Visibility="{Binding IsDirectory, Converter={StaticResource !B2V}}">
-									<XivToolsWpf:TextBlock Text="{Binding Name}" FontWeight="Bold" Visibility="{Binding IsNameCustom, Converter={StaticResource !B2V}}"/>
-									<XivToolsWpf:TextBlock Text="{Binding FileName}" FontWeight="Bold"/>
+									<XivToolsWpf:RenameTextBox Text="{Binding Name}" FontWeight="Bold" Visibility="{Binding IsNameCustom, Converter={StaticResource !B2V}}"/>
+									<XivToolsWpf:RenameTextBox Text="{Binding FileName}" FontWeight="Bold"/>
 
-									<XivToolsWpf:TextBlock Width="200" TextWrapping="Wrap" Text="{Binding File.Description}" Visibility="{Binding File.Description, Converter={StaticResource NotNullToVisibilityConverter}}" Margin="0, 6"/>
+									<XivToolsWpf:RenameTextBox Width="200" Text="{Binding File.Description}" Visibility="{Binding File.Description, Converter={StaticResource NotNullToVisibilityConverter}}" Margin="0, 6"/>
 
 									<StackPanel Orientation="Horizontal" Visibility="{Binding File.Author, Converter={StaticResource NotNullToVisibilityConverter}}">
-										<XivToolsWpf:TextBlock Key="FileMeta_Author" Margin="0, 0, 6, 0"/>
-										<XivToolsWpf:TextBlock Text="{Binding File.Author}"/>
+										<XivToolsWpf:RenameTextBox Text="FileMeta_Author" Margin="0, 0, 6, 0"/>
+										<XivToolsWpf:RenameTextBox Text="{Binding File.Author}"/>
 									</StackPanel>
 
 									<StackPanel Orientation="Horizontal" Visibility="{Binding File.Version, Converter={StaticResource NotNullToVisibilityConverter}}">
-										<XivToolsWpf:TextBlock Key="FileMeta_Version" Margin="0, 0, 6, 0"/>
-										<XivToolsWpf:TextBlock Text="{Binding File.Version}"/>
+										<XivToolsWpf:RenameTextBox Text="FileMeta_Version" Margin="0, 0, 6, 0"/>
+										<XivToolsWpf:RenameTextBox Text="{Binding File.Version}"/>
 									</StackPanel>
 
 								</StackPanel>
@@ -331,7 +331,7 @@
 						  Width="32"
 						  Margin="4, 0">
 					<MenuItem.ToolTip>
-						<XivToolsWpf:TextBlock Key="FileBrowser_Browse" />
+						<XivToolsWpf:RenameTextBox Text="FileBrowser_Browse" />
 					</MenuItem.ToolTip>
 				</MenuItem>
 			</Menu>

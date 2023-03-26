@@ -38,7 +38,7 @@
 				<GroupBox.Header>
 					<StackPanel Orientation="Horizontal">
 						<XivToolsWpf:Header Icon="Globe"
-											Key="Scene_World_Header" />
+											Text="Scene_World_Header" />
 						<TextBlock Text=" - "
 								   Style="{StaticResource Header}"
 								   Margin="3, 0, 0, 0" />
@@ -93,9 +93,9 @@
 							</materialdesign:ToggleButtonAssist.OnContent>
 						</ToggleButton>
 
-						<XivToolsWpf:TextBlock Grid.Row="0"
+						<XivToolsWpf:RenameTextBox Grid.Row="0"
 											   Grid.Column="1"
-											   Key="Scene_World_Time"
+											   Text="Scene_World_Time"
 											   Style="{StaticResource Label}" />
 						<XivToolsWpf:NumberBox Minimum="0"
 											   Maximum="1439"
@@ -111,9 +111,9 @@
 								   Width="50"
 								   HorizontalAlignment="Right" />
 
-						<XivToolsWpf:TextBlock Grid.Row="1"
+						<XivToolsWpf:RenameTextBox Grid.Row="1"
 											   Grid.Column="1"
-											   Key="Scene_World_Day"
+											   Text="Scene_World_Day"
 											   Style="{StaticResource Label}" />
 						<XivToolsWpf:NumberBox Grid.Row="1"
 											   Grid.Column="2"
@@ -126,8 +126,8 @@
 											   Maximum="31" />
 					</Grid>
 
-					<XivToolsWpf:TextBlock Grid.Row="1"
-										   Key="Scene_World_Weather"
+					<XivToolsWpf:RenameTextBox Grid.Row="1"
+										   Text="Scene_World_Weather"
 										   Style="{StaticResource Label}" />
 
 					<Grid Grid.Row="1"

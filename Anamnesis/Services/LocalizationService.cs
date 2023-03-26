@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Anamnesis.Files;
-using XivToolsWpf.DependencyInjection;
+using XivToolsWpf.DependencyProperties;
 
 public class LocalizationService : ServiceBase<LocalizationService>, ILocaleProvider
 {

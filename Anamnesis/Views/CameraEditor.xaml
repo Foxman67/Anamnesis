@@ -19,7 +19,7 @@
 				Visibility="{Binding DataContext, Converter={StaticResource NotNullToVisibilityConverter}}">
 		<GroupBox.Header>
 			<XivToolsWpf:Header Icon="Camera"
-									Key="Scene_Camera_Header" />
+									Text="Scene_Camera_Header" />
 		</GroupBox.Header>
 
 		<Grid>
@@ -40,17 +40,17 @@
 				<RowDefinition />
 			</Grid.RowDefinitions>
 
-			<XivToolsWpf:TextBlock Grid.Row="0"
-									Key="Scene_Camera_Delimit"
+			<XivToolsWpf:RenameTextBox Grid.Row="0"
+									Text="Scene_Camera_Delimit"
 									Style="{StaticResource Label}" />
 			
 			<CheckBox Grid.Row="0"
 					  Grid.Column="1"
 				  	IsChecked="{Binding CameraService.DelimitCamera}" />
 
-			<XivToolsWpf:TextBlock Grid.Row="1"
+			<XivToolsWpf:RenameTextBox Grid.Row="1"
 									Grid.Column="0"
-									Key="Scene_Camera_Position"
+									Text="Scene_Camera_Position"
 									Style="{StaticResource Label}" />
 			
 			<Grid Grid.Row="1" Grid.Column="1">
@@ -63,9 +63,9 @@
 									Maximum="4096" />
 			</Grid>
 
-			<XivToolsWpf:TextBlock Grid.Row="2"
+			<XivToolsWpf:RenameTextBox Grid.Row="2"
 									Grid.Column="0"
-									Key="Scene_Camera_Angle"
+									Text="Scene_Camera_Angle"
 									Style="{StaticResource Label}" />
 			<Grid Grid.Row="2"
 						Grid.Column="1">
@@ -103,9 +103,9 @@
 			</Grid>
 
 
-			<XivToolsWpf:TextBlock Grid.Row="3"
+			<XivToolsWpf:RenameTextBox Grid.Row="3"
 									Grid.Column="0"
-									Key="Scene_Camera_Rotation"
+									Text="Scene_Camera_Rotation"
 									Style="{StaticResource Label}" />
 			
 			<XivToolsWpf:NumberBox Grid.Row="3"
@@ -118,9 +118,9 @@
 									Wrap="True"
 									TickFrequency="1" />
 
-			<XivToolsWpf:TextBlock Grid.Row="4"
+			<XivToolsWpf:RenameTextBox Grid.Row="4"
 									Grid.Column="0"
-									Key="Scene_Camera_Pan"
+									Text="Scene_Camera_Pan"
 									Style="{StaticResource Label}" />
 			
 			<ana:Vector2DEditor Grid.Row="4"
@@ -132,9 +132,9 @@
 								Wrap="True"
 								TickFrequency="1" />
 
-			<XivToolsWpf:TextBlock Grid.Row="5"
+			<XivToolsWpf:RenameTextBox Grid.Row="5"
 									Grid.Column="0"
-									Key="Scene_Camera_Zoom"
+									Text="Scene_Camera_Zoom"
 									Style="{StaticResource Label}" />
 			
 			<XivToolsWpf:NumberBox Grid.Row="5"
@@ -146,9 +146,9 @@
 									Maximum="{Binding CameraService.Camera.MaxZoom}"
 									TickFrequency="1" />
 
-			<XivToolsWpf:TextBlock Grid.Row="6"
+			<XivToolsWpf:RenameTextBox Grid.Row="6"
 									Grid.Column="0"
-									Key="Scene_Camera_FoV"
+									Text="Scene_Camera_FoV"
 									Style="{StaticResource Label}" />
 			
 			<XivToolsWpf:NumberBox Grid.Row="6"
@@ -168,7 +168,7 @@
 
 			<XivToolsWpf:InfoControl Grid.RowSpan="10"
 									 Grid.ColumnSpan="2"
-									 Key="Scene_Camera_GPoseWarn"
+									 Text="Scene_Camera_GPoseWarn"
 									 Visibility="{Binding GposeService.IsGpose, Converter={StaticResource !B2V}}" />
 
 		</Grid>

@@ -40,7 +40,7 @@
 			IsEnabled="{Binding ModelObject.IsHuman}"/>-->
 
 		<!-- Height -->
-		<xtw:TextBlock Grid.Row="1" Key="Character_Model_Height" Style="{StaticResource Label}"/>
+		<xtw:RenameTextBox Grid.Row="1" Text="Character_Model_Height" Style="{StaticResource Label}"/>
 		<xtw:NumberBox Grid.Row="1"
 					   Grid.Column="1"
 					   Slider="Absolute"
@@ -51,7 +51,7 @@
 					   UncapTextInput="True"/>
 
 		<!-- Wetness -->
-		<xtw:TextBlock Grid.Row="2" Grid.Column="0" Key="Character_Model_Wetness" Style="{StaticResource Label}"/>
+		<xtw:RenameTextBox Grid.Row="2" Grid.Column="0" Text="Character_Model_Wetness" Style="{StaticResource Label}"/>
 		<Grid Grid.Row="2" Grid.Column="1">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto"/>
@@ -72,7 +72,7 @@
 				</materialdesign:ToggleButtonAssist.OnContent>
 
 				<ToggleButton.ToolTip>
-					<xtw:TextBlock x:Name="ModeTooltip" Key="Character_Model_WetNone"/>
+					<xtw:RenameTextBox x:Name="ModeTooltip" Text="Character_Model_WetNone"/>
 				</ToggleButton.ToolTip>
 				
 			</ToggleButton>
@@ -87,7 +87,7 @@
 		</Grid>
 
 		<!-- Bust Scale -->
-		<xtw:TextBlock Grid.Row="4" Grid.Column="0" Key="Character_Model_BustScale" Style="{StaticResource Label}"/>
+		<xtw:RenameTextBox Grid.Row="4" Grid.Column="0" Text="Character_Model_BustScale" Style="{StaticResource Label}"/>
 		<ana:VectorEditor Grid.Row="4"
 						  Grid.Column="1"
 						  Value="{Binding ModelObject.Bust.Scale}" Expanded="False" CanLink="True" Minimum="0" Maximum="10"

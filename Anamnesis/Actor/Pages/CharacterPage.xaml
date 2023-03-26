@@ -35,7 +35,7 @@
 				Style="{StaticResource PanelGroupBox}">
 				<GroupBox.Header>
 					<XivToolsWpf:Header
-						Key="Character_Customize_Header"
+						Text="Character_Customize_Header"
 						Icon="ConciergeBell" />
 				</GroupBox.Header>
 
@@ -50,7 +50,7 @@
 			Style="{StaticResource PanelGroupBox}">
 			<GroupBox.Header>
 				<XivToolsWpf:Header
-					Key="Character_Equipment_Header"
+					Text="Character_Equipment_Header"
 					Icon="ChessQueen" />
 			</GroupBox.Header>
 
@@ -70,7 +70,7 @@
 						Visibility="{Binding Actor.IsHuman, Converter={StaticResource B2V}}">
 
 						<Button.ToolTip>
-							<XivToolsWpf:TextBlock Key="Character_Equipment_RaceGear" />
+							<XivToolsWpf:RenameTextBox Text="Character_Equipment_RaceGear" />
 						</Button.ToolTip>
 
 						<fa:IconBlock
@@ -84,7 +84,7 @@
 						Visibility="{Binding Actor.IsHuman, Converter={StaticResource B2V}}">
 
 						<Button.ToolTip>
-							<XivToolsWpf:TextBlock Key="Character_Equipment_NpcSmallclothes" />
+							<XivToolsWpf:RenameTextBox Text="Character_Equipment_NpcSmallclothes" />
 						</Button.ToolTip>
 
 						<fa:IconBlock
@@ -98,7 +98,7 @@
 
 						<Button.ToolTip>
 							<StackPanel>
-								<XivToolsWpf:TextBlock Key="Character_Equipment_Clear" />
+								<XivToolsWpf:RenameTextBox Text="Character_Equipment_Clear" />
 								<ana:HotkeyPrompt Function="AppearancePage.ClearEquipment" />
 							</StackPanel>
 						</Button.ToolTip>
@@ -118,7 +118,7 @@
 		</GroupBox>
 
 		<XivToolsWpf:InfoControl
-			Key="Character_WarningGpose"
+			Text="Character_WarningGpose"
 			Grid.Column="0"
 			Grid.ColumnSpan="2"
 			Margin="12"
@@ -138,7 +138,7 @@
 				<GroupBox Style="{StaticResource PanelGroupBox}">
 					<GroupBox.Header>
 						<XivToolsWpf:Header
-							Key="Character_Actor_Header"
+							Text="Character_Actor_Header"
 							Margin="0,0,6,0"
 							Icon="Horse" />
 					</GroupBox.Header>
@@ -160,8 +160,8 @@
                             <RowDefinition />
 						</Grid.RowDefinitions>
 
-						<XivToolsWpf:TextBlock
-							Key="Character_Actor_Nickname"
+						<XivToolsWpf:RenameTextBox
+							Text="Character_Actor_Nickname"
 							Grid.Row="0"
 							Grid.Column="0"
 							Style="{StaticResource Label}" />
@@ -173,8 +173,8 @@
 							Style="{StaticResource MaterialDesignTextBox}"
 							Text="{Binding Actor.Nickname, UpdateSourceTrigger=PropertyChanged}" />
 
-						<XivToolsWpf:TextBlock
-							Key="Character_Actor_Alpha"
+						<XivToolsWpf:RenameTextBox
+							Text="Character_Actor_Alpha"
 							Grid.Row="4"
 							Grid.Column="0"
 							Style="{StaticResource Label}" />
@@ -187,15 +187,15 @@
 							TickFrequency="0.1"
 							Value="{Binding Actor.Transparency}" />
 
-                        <XivToolsWpf:TextBlock
-							Key="Character_Equipment_Tint"
+                        <XivToolsWpf:RenameTextBox
+							Text="Character_Equipment_Tint"
 							Grid.Row="5"
 							Grid.Column="0"
 							Style="{StaticResource Label}" />
                         <anaControls:RgbColorControl Grid.Row="5" Grid.Column="2" Value="{Binding Actor.ModelObject.Tint}"/>
 
-                        <XivToolsWpf:TextBlock
-							Key="Character_Actor_Voice"
+                        <XivToolsWpf:RenameTextBox
+							Text="Character_Actor_Voice"
 							Grid.Row="6"
 							Grid.Column="0"
 							Style="{StaticResource Label}" />
@@ -210,7 +210,7 @@
 								<GroupStyle>
 									<GroupStyle.HeaderTemplate>
 										<DataTemplate>
-											<XivToolsWpf:TextBlock
+											<XivToolsWpf:RenameTextBox
 												Padding="10,5"
 												HorizontalAlignment="Left"
 												FontSize="13"
@@ -231,8 +231,8 @@
 						</ComboBox>
 
 
-						<XivToolsWpf:TextBlock
-							Key="SubActor_Title"
+						<XivToolsWpf:RenameTextBox
+							Text="SubActor_Title"
 							Grid.Row="7"
 							Grid.Column="0"
 							Style="{StaticResource Label}" />
@@ -269,7 +269,7 @@
 					Visibility="{Binding Actor.ModelObject, Converter={StaticResource NotNullToVisibilityConverter}}">
 					<GroupBox.Header>
 						<XivToolsWpf:Header
-							Key="Character_Model_Header"
+							Text="Character_Model_Header"
 							Icon="GraduationCap" />
 					</GroupBox.Header>
 
@@ -281,7 +281,7 @@
 					Visibility="{Binding Actor.ModelObject.ExtendedAppearance, Converter={StaticResource NotNullToVisibilityConverter}, FallbackValue=Collapsed}">
 					<GroupBox.Header>
 						<XivToolsWpf:Header
-							Key="Character_ExAppearance_Header"
+							Text="Character_ExAppearance_Header"
 							Icon="UserCog" />
 					</GroupBox.Header>
 
@@ -339,13 +339,13 @@
 			</Grid>
 
 			<XivToolsWpf:InfoControl
-				Key="Warning_MinionGposeTitle"
+				Text="Warning_MinionGposeTitle"
 				Width="256">
 				<XivToolsWpf:InfoControl.ToolTip>
-					<XivToolsWpf:TextBlock
-						Key="Warning_MinionGposeFace"
+					<XivToolsWpf:RenameTextBox
+						Text="Warning_MinionGposeFace"
 						MaxWidth="256"
-						TextWrapping="Wrap" />
+						/>
 				</XivToolsWpf:InfoControl.ToolTip>
 
 				<XivToolsWpf:InfoControl.Resources>

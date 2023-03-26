@@ -36,7 +36,7 @@
 									  Margin="0, 2">
 
 							<ToggleButton.ToolTip>
-								<XivToolsWpf:TextBlock Key="{Binding TooltipKey}"/>
+								<XivToolsWpf:RenameTextBox Text="{Binding TooltipKey}"/>
 							</ToggleButton.ToolTip>
 
 							<Grid Margin="0, 0, 0, -6">
@@ -50,7 +50,7 @@
 													   FontSize="16"
 													   Grid.Row="0"/>
 
-								<XivToolsWpf:TextBlock Key="{Binding DisplayNameKey}"
+								<XivToolsWpf:RenameTextBox Text="{Binding DisplayNameKey}"
 													   Grid.Row="1"
 													   FontSize="10"
 													   Visibility="{Binding IsActive, Converter={StaticResource B2V}}"/>
@@ -163,7 +163,7 @@
 						Style="{StaticResource TransparentButton}">
 
 				<Button.ToolTip>
-					<XivToolsWpf:TextBlock Key="System_History"/>
+					<XivToolsWpf:RenameTextBox Text="System_History"/>
 				</Button.ToolTip>
 
 				<fa:IconBlock FontSize="12"

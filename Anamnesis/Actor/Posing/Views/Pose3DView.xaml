@@ -73,7 +73,7 @@
 
 									<views:BoneView Grid.Column="0" />
 
-									<XivToolsWpf:TextBlock
+									<XivToolsWpf:RenameTextBox
 											Grid.Column="1"
 											VerticalAlignment="Center"
 											FontSize="11"

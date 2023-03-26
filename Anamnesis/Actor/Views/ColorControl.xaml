@@ -10,7 +10,7 @@
 
 	<Button Height="22" Width="22" Padding="0" Style="{DynamicResource TransparentButton}" Click="OnClick" VerticalAlignment="Center" Background="Transparent" x:Name="ContentArea">
 		<Button.ToolTip>
-			<xivToolsWpf:TextBlock Key="{Binding ToolTipKey}"/>
+			<xivToolsWpf:RenameTextBox Text="{Binding ToolTipKey}"/>
 		</Button.ToolTip>
 
 		<Border Height="20" Width="20" CornerRadius="2" BorderBrush="#22000000" BorderThickness="1" Margin="1">

@@ -43,13 +43,13 @@
             <GroupBox.Header>
 				<StackPanel Orientation="Horizontal">
 					<controls:Header Icon="Running" Text="Actor - "/>
-					<XivToolsWpf:TextBlock Text="{Binding TargetService.PlayerTarget.DisplayName}"/>
+					<XivToolsWpf:RenameTextBox Text="{Binding TargetService.PlayerTarget.DisplayName}"/>
 				</StackPanel>
 			</GroupBox.Header>
 
             <StackPanel>
 
-				<XivToolsWpf:TextBlock Text="{Binding TargetService.PlayerTarget.Index, StringFormat=Index: {0:D}}"/>
+				<XivToolsWpf:RenameTextBox Text="{Binding TargetService.PlayerTarget.Index, StringFormat=Index: {0:D}}"/>
 
 				<ComboBox ItemsSource="{Binding Source={x:Static anaMem:ActorType.AllActorTypes}}" SelectedIndex="{Binding TargetService.PlayerTarget.ObjectKindInt}">
 					<ComboBox.ItemContainerStyle>

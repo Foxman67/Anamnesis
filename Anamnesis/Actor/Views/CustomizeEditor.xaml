@@ -64,7 +64,7 @@
 				</Grid.RowDefinitions>
 
 				<!-- Race / Tribe / Gender / Age -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="0" Key="Character_Appearance_Race" Style="{StaticResource Label}" Margin="0, 6, 6, 0"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="0" Text="Character_Appearance_Race" Style="{StaticResource Label}" Margin="0, 6, 6, 0"/>
 				<Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="0, 0, 0, 2">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="Auto"/>
@@ -85,7 +85,7 @@
 				</Grid>
 
 				<!-- Skintone -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="2" Key="Character_Appearance_Skin" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="2" Text="Character_Appearance_Skin" Style="{StaticResource Label}"/>
 
 				<Grid Grid.Column="1" Grid.Row="2">
 					<Grid.ColumnDefinitions>
@@ -97,12 +97,12 @@
 
 					<controls:ColorControl Grid.Column="0" Value="{Binding Customize.Skintone}" Type="Skin" Gender="{Binding Customize.Gender}" Tribe="{Binding Customize.Tribe}" Margin="0, 2, 0, 0"/>
 
-					<XivToolsWpf:TextBlock Grid.Column="2" Key="Character_Appearance_Iris" Style="{StaticResource Label}"/>
+					<XivToolsWpf:RenameTextBox Grid.Column="2" Text="Character_Appearance_Iris" Style="{StaticResource Label}"/>
 					<CheckBox Grid.Column="3" IsChecked="{Binding Customize.SmallIris}"/>
 				</Grid>
 			
 				<!-- Eyes -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="3" Key="Character_Appearance_Eyes" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="3" Text="Character_Appearance_Eyes" Style="{StaticResource Label}"/>
 				<Grid Grid.Column="1" Grid.Row="3">
 
 					<Grid.ColumnDefinitions>
@@ -133,7 +133,7 @@
 				</Grid>
 
 				<!-- Face Type -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="4" Key="Character_Appearance_Face" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="4" Text="Character_Appearance_Face" Style="{StaticResource Label}"/>
 				<Grid Grid.Column="1" Grid.Row="4" Margin="0, 0, 0, 2">
 
 					<Grid.ColumnDefinitions>
@@ -147,11 +147,11 @@
 				</Grid>
 				
 				<!-- Facial Features -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="5" Key="Character_Appearance_Features" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="5" Text="Character_Appearance_Features" Style="{StaticResource Label}"/>
 				<controls:FacialFeaturesControl Value="{Binding Customize.FacialFeatures}" Gender="{Binding Customize.Gender}" Tribe="{Binding Customize.Tribe}" Head="{Binding Customize.Head}" Grid.Column="1" Grid.Row="5"/>
 
 				<!-- Face Paint  -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="6" Key="Character_Appearance_FacePaint" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="6" Text="Character_Appearance_FacePaint" Style="{StaticResource Label}"/>
 
 				<Grid Grid.Column="1" Grid.Row="6" Margin="0, 2, 0, 0">
 					<Grid.ColumnDefinitions>
@@ -174,7 +174,7 @@
 				
 
 				<!-- Hair -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="7" Key="Character_Appearance_Hair" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="7" Text="Character_Appearance_Hair" Style="{StaticResource Label}"/>
 
 				<Grid Grid.Column="1" Grid.Row="7" Margin="0, 2, 0, 4">
 					<Grid.ColumnDefinitions>
@@ -200,7 +200,7 @@
 				</Grid>
 				
 				<!-- Mouth / Lips  -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="8" Key="Character_Appearance_Lips" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="8" Text="Character_Appearance_Lips" Style="{StaticResource Label}"/>
 				<Grid Grid.Column="1" Grid.Row="8">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition/>
@@ -216,23 +216,23 @@
 				</Grid>
 
 				<!-- Height -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="9" Key="Character_Appearance_Height" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="9" Text="Character_Appearance_Height" Style="{StaticResource Label}"/>
 				<controls:HeightEditor Height="24" Grid.Column="1" Grid.Row="9" Margin="0, 0, 0, 2"
 									   Value="{Binding Customize.Height}" Tribe="{Binding Customize.Tribe}" 
 									   Gender="{Binding Customize.Gender}" Age="{Binding Customize.Age}"/>
 
 				<!-- Bust Size -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="10" Key="Character_Appearance_BustSize" Style="{StaticResource Label}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="10" Text="Character_Appearance_BustSize" Style="{StaticResource Label}"/>
 				<XivToolsWpf:NumberBox Value="{Binding Customize.Bust}" Grid.Column="1" Grid.Row="10" Slider="Absolute" Minimum="0" Maximum="100" Margin="0, 0, 0, 2"/>
 
 				<!-- Muscle / Ears / Tail Size -->
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="11" Key="Character_Appearance_Muscle" Style="{StaticResource Label}" Visibility="{Binding HasMuscles, Converter={StaticResource B2V}}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="11" Text="Character_Appearance_Muscle" Style="{StaticResource Label}" Visibility="{Binding HasMuscles, Converter={StaticResource B2V}}"/>
 				<XivToolsWpf:NumberBox Value="{Binding Customize.EarMuscleTailSize}" Grid.Column="1" Grid.Row="11" Visibility="{Binding HasMuscles, Converter={StaticResource B2V}}" Minimum="0" Maximum="100" Slider="Absolute"/>
 
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="11" Key="Character_Appearance_EarsSize" Style="{StaticResource Label}" Visibility="{Binding HasEars, Converter={StaticResource B2V}}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="11" Text="Character_Appearance_EarsSize" Style="{StaticResource Label}" Visibility="{Binding HasEars, Converter={StaticResource B2V}}"/>
 				<XivToolsWpf:NumberBox Value="{Binding Customize.EarMuscleTailSize}" Grid.Column="1" Grid.Row="11" Visibility="{Binding HasEars, Converter={StaticResource B2V}}" Minimum="0" Maximum="100" Slider="Absolute"/>
 
-				<XivToolsWpf:TextBlock Grid.Column="0" Grid.Row="11" Key="Character_Appearance_TailSize" Style="{StaticResource Label}" Visibility="{Binding HasTail, Converter={StaticResource B2V}}"/>
+				<XivToolsWpf:RenameTextBox Grid.Column="0" Grid.Row="11" Text="Character_Appearance_TailSize" Style="{StaticResource Label}" Visibility="{Binding HasTail, Converter={StaticResource B2V}}"/>
 				<XivToolsWpf:NumberBox Value="{Binding Customize.EarMuscleTailSize}" Grid.Column="1" Grid.Row="11" Visibility="{Binding HasTail, Converter={StaticResource B2V}}" Minimum="0" Maximum="100" Slider="Absolute"/>
 
 
@@ -251,24 +251,24 @@
 					</Grid.ColumnDefinitions>
 					
 					<!-- Jaw Type -->
-					<XivToolsWpf:TextBlock Grid.Row="0" Grid.Column="0" Key="Character_Appearance_Jaw" Style="{StaticResource Label}"/>
+					<XivToolsWpf:RenameTextBox Grid.Row="0" Grid.Column="0" Text="Character_Appearance_Jaw" Style="{StaticResource Label}"/>
 					<XivToolsWpf:NumberBox Grid.Row="0" Value="{Binding Customize.Jaw}" Grid.Column="1" Minimum="0" Maximum="255" Buttons="True" ValueOffset="1"/>
 
 					<!-- Eyebrows type -->
-					<XivToolsWpf:TextBlock Grid.Row="0" Grid.Column="2" Key="Character_Appearance_Eyebrows" Style="{StaticResource Label}"/>
+					<XivToolsWpf:RenameTextBox Grid.Row="0" Grid.Column="2" Text="Character_Appearance_Eyebrows" Style="{StaticResource Label}"/>
 					<XivToolsWpf:NumberBox Grid.Row="0" Value="{Binding Customize.Eyebrows}" Grid.Column="3" Minimum="0" Maximum="255" Buttons="True" ValueOffset="1"/>
 
 					<!-- Nose Type -->
-					<XivToolsWpf:TextBlock Grid.Row="1" Grid.Column="0" Key="Character_Appearance_Nose" Style="{StaticResource Label}"/>
+					<XivToolsWpf:RenameTextBox Grid.Row="1" Grid.Column="0" Text="Character_Appearance_Nose" Style="{StaticResource Label}"/>
 					<XivToolsWpf:NumberBox Grid.Row="1" Value="{Binding Customize.Nose}" Grid.Column="1" Minimum="0" Maximum="255" Buttons="True" ValueOffset="1"/>
 
 					<!-- Ear / Tail Type -->
-					<XivToolsWpf:TextBlock Grid.Row="1" Grid.Column="2" Key="Character_Appearance_Ears" Style="{StaticResource Label}" Visibility="{Binding HasEars, Converter={StaticResource B2V}}"/>
-					<XivToolsWpf:TextBlock Grid.Row="1" Grid.Column="2" Key="Character_Appearance_Tail" Style="{StaticResource Label}" Visibility="{Binding HasTail, Converter={StaticResource B2V}}"/>
+					<XivToolsWpf:RenameTextBox Grid.Row="1" Grid.Column="2" Text="Character_Appearance_Ears" Style="{StaticResource Label}" Visibility="{Binding HasEars, Converter={StaticResource B2V}}"/>
+					<XivToolsWpf:RenameTextBox Grid.Row="1" Grid.Column="2" Text="Character_Appearance_Tail" Style="{StaticResource Label}" Visibility="{Binding HasTail, Converter={StaticResource B2V}}"/>
 					<XivToolsWpf:NumberBox Grid.Row="1" Value="{Binding Customize.TailEarsType}" Grid.Column="3" Visibility="{Binding HasEarsTail, Converter={StaticResource B2V}}" Minimum="0" Maximum="255" Buttons="True"/>
 
 					<!-- Fur pattern -->
-					<XivToolsWpf:TextBlock Grid.Row="2" Grid.Column="0" Key="Character_Appearance_Fur" Style="{StaticResource Label}" Visibility="{Binding HasFur, Converter={StaticResource B2V}}"/>
+					<XivToolsWpf:RenameTextBox Grid.Row="2" Grid.Column="0" Text="Character_Appearance_Fur" Style="{StaticResource Label}" Visibility="{Binding HasFur, Converter={StaticResource B2V}}"/>
 					<XivToolsWpf:NumberBox Grid.Row="2" Value="{Binding Customize.LipsToneFurPattern}" Grid.Column="1" Visibility="{Binding HasFur, Converter={StaticResource B2V}}" Minimum="0" Maximum="255" Buttons="True"/>
 
 				</Grid>
